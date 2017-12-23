@@ -13,7 +13,7 @@ class Handle(object):
             timestamp = data.timesstamp
             nonce = data.nonce
             echostr = data.echostr
-            token = common._ACCESS_TOKEN
+            token = common._TOKEN
             list = [token, timestamp, nonce]
             list.sort()
             sha1 = hashlib.sha1()
