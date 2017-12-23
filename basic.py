@@ -7,8 +7,8 @@ import common
 
 class Basic:
     def __init__(self):
-        self.__accessToken = ''
-        self.__leftTime = 0
+        self.__access_token = ''
+        self.__left_time = 0
 
     def __real_get_access_token(self):
         app_id = common._APP_ID
