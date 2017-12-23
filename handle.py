@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import hashlib
 import web
+import common
 
 class Handle(object):
     def GET(self):
@@ -12,7 +13,7 @@ class Handle(object):
             timestamp = data.timesstamp
             nonce = data.nonce
             echostr = data.echostr
-            token = '9ot3rQ0xOgc'
+            token = common._ACCESS_TOKEN
             list = [token, timestamp, nonce]
             list.sort()
             sha1 = hashlib.sha1()
