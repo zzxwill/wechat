@@ -9,7 +9,7 @@ class Index(object):
     render = web.template.render('templates/')
 
     def GET(self):
-        return self.render.index
+        return self.render.index()
 
     def POST(self):
         try:
