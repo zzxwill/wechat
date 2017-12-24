@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-#
+# -*- coding: utf-8 -*-
 import urllib
 import time
 import json
@@ -15,8 +15,7 @@ class Basic:
         app_secret = common._APP_SECRET
         post_url = ("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=%s&secret=%s"
                    % (app_id, app_secret))
-        url_resp = urllib.urlopen(post_url)
-        url_resp = json.loads(url_resp.read())
+        url_resp = json.loads(common.call_wechat_api(post_url))
         self.__access_token = url_resp['access_token']
         self.__left_time = url_resp['expires_in']
 

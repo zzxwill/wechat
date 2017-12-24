@@ -2,12 +2,12 @@
 # filename: main.py
 import web
 from handle import Handle
+from index import Index
 
-render = web.template.render('templates/')
 
 urls = (
     '/wx', 'Handle',
-    '/', 'index'
+    '/', 'Index'
 )
 
 if __name__ == '__main__':
