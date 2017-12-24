@@ -3,8 +3,11 @@
 import web
 from handle import Handle
 
+render = web.template.render('templates/')
+
 urls = (
     '/wx', 'Handle',
+    '/', 'index'
 )
 
 if __name__ == '__main__':
